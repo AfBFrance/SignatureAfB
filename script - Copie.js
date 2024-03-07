@@ -59,10 +59,10 @@ function generateSignature() {
         </tr>
         <tr>
 	    <td style="text-align:center;">
-		   <a href="https://www.instagram.com/afb_france/"><img src="images/Instagram.png" alt="Instagram" style="max-width: 20px;"></a> 
-                    <a href="https://www.facebook.com/Social.Green.IT.France"><img src="images/Facebook.png" alt="Facebook" style="max-width: 20px;"></a> 
-                    <a href="https://www.linkedin.com/showcase/afb-france-social-and-green-it"><img src="images/Linkedin.png" alt="LinkedIn" style="max-width: 20px;"></a> 
-                    <a href="https://www.youtube.com/channel/UCtV2II_AsZznHfQ0Qcptbsw"><img src="images/YouTube.png" alt="YouTube" style="max-width: 20px;"></a></td>
+		   <a href="https://www.instagram.com/afb_france/"><img src="./images/Instagram.png" alt="Instagram" style="max-width: 20px;"></a> 
+                    <a href="https://www.facebook.com/Social.Green.IT.France"><img src="./images/Facebook.png" alt="Facebook" style="max-width: 20px;"></a> 
+                    <a href="https://www.linkedin.com/showcase/afb-france-social-and-green-it"><img src="./images/Linkedin.png" alt="LinkedIn" style="max-width: 20px;"></a> 
+                    <a href="https://www.youtube.com/channel/UCtV2II_AsZznHfQ0Qcptbsw"><img src="./images/YouTube.png" alt="YouTube" style="max-width: 20px;"></a></td>
 	                <td>
                 <p style="text-decoration:none;color:#000;">
                     <a href="https://www.afb-group.fr/">Notre groupe</a> |
@@ -73,7 +73,7 @@ function generateSignature() {
             </td>
         </tr>
 	<tr><td colspan="2">
-	<img src="images/barre.jpg">
+	<img src="./images/barre.jpg">
 	<p id="siteAddress">${siteAddress}</p>
 	${showHours ? `<p>${hours}</p>` : ''}
 	</td>
