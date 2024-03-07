@@ -1,0 +1,118 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #E5F0C7;
+}
+
+h1{
+text-align:center;
+color:#082C27;
+}
+
+#logo-afb{
+text-align:center;
+}
+#form {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#preview,#bouton-generer,#tuto{
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#tuto li{
+ line-height: 2em;
+
+}
+
+#tuto img{
+ border:solid 1px;
+}
+
+input[type=text], select, button,input[type=file] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #082C27;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight:bold;
+    font-size:1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#logoPreview {
+    display: block;
+    margin: 10px auto;
+    max-width: 100px;
+}
+
+/* Style du champ de sélection de fichier */
+#additionalImage {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Styles additionnels pour la zone de prévisualisation de la signature */
+.signature-preview {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Assurez-vous que ces styles s'intègrent bien avec le reste de votre mise en page */
+.signature-template {
+  font-size:12px;
+    font-family: Arial, sans-serif;
+}
+
+.signature-template a{
+  color :#005191;
+  text-decoration:none;
+  
+}
+
+.signature-template img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.signature-template table {
+    border-collapse: separate;
+    border-spacing: 10px 5px; /* Ajouter de l'espace entre les cellules}
+
+.signature-template td {
+    border: 1px solid #ddd
+    padding: 8px;}
+
+@media screen and (max-width: 600px) {
+    .signature-template table {
+        width: 100%;
+    }
+
+    .signature-template img {
+        max-width: 80px;
+    }
+}
