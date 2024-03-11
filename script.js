@@ -25,9 +25,14 @@ function generateSignature() {
     var phone = showPhone ? document.getElementById('phone').value : '';
     var siteSelect = document.getElementById('siteAddress');
     var siteAddress = siteSelect.options[siteSelect.selectedIndex].text;
-    var email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@afb-group.eu`;
     
-	
+	function replaceSpacesWithDashes(str) {
+        return str.replace(/\s+/g, '-');
+    }
+    var cleanedFirstName = replaceSpacesWithDashes(firstName);
+    var cleanedLastName = replaceSpacesWithDashes(lastName);
+    var email = `${cleanedFirstName.toLowerCase()}.${cleanedLastName.toLowerCase()}@afb-group.eu`;
+
     var showHours = document.getElementById('showHours').checked;
     var siteHours = document.getElementById('hours');
     /*var selectedShopHours = document.getElementById('hours').options[document.getElementById('hours').selectedIndex].text;*/
@@ -43,7 +48,7 @@ function generateSignature() {
             <td style="text-align:center;">
 		<img src="images/afb.png" alt="Logo AfB" style="width:100px;">
 	</td>
-            <td><p style="padding 0 0 5px;"><strong id="name">${firstName} ${lastName}</strong> | <id="position">${position}
+            <td><p style="padding 0 0 5px;"><strong id="name">${cleanedFirstName} ${cleanedLastName}</strong> | <id="position">${position}
             <div style:="display: flex;flex-direction:row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;align-content: stretch;"><p><img src="images/email.png" alt="Email :"> <a href="mailto:${email}">${email}</a>
 		${showPhone ? ` | <img src="images/tel.png" alt="Tel :"> <a href="tel:+33${phone}">+33${phone}</a></p>` : ''}
                             </div></td>
