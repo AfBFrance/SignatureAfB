@@ -1,5 +1,6 @@
 window.onload = function() {
     toggleElementDisplay('showPhone', 'phone');
+    toggleElementDisplay('showPhone2', 'phone2');
     toggleElementDisplay('showImage', 'additionalImage');
     toggleElementDisplay('showHours', 'hours');
 
@@ -23,6 +24,8 @@ function generateSignature() {
     var position = document.getElementById('position').value;
     var showPhone = document.getElementById('showPhone').checked;
     var phone = showPhone ? document.getElementById('phone').value : '';
+    var phone2 = showPhone2 ? document.getElementById('phone2').value : '';
+
     var siteSelect = document.getElementById('siteAddress');
     var siteAddress = siteSelect.options[siteSelect.selectedIndex].text;
     
@@ -50,7 +53,7 @@ function generateSignature() {
 	</td>
             <td><p style="padding 0 0 5px;"><strong id="name">${cleanedFirstName} ${cleanedLastName}</strong> | <id="position">${position}
             <div style:="display: flex;flex-direction:row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;align-content: stretch;"><p><img src="images/email.png" alt="Email :"> <a href="mailto:${email}">${email}</a>
-		${showPhone ? ` | <img src="images/tel.png" alt="Tel :"> <a href="tel:+33${phone}">+33${phone}</a></p>` : ''}
+		${showPhone ? ` | <img src="images/tel.png" alt="Tel :"> <a href="tel:+33${phone}">+33${phone}</a></p>` : ''} ${showPhone2 ? `<img src="images/tel.png" alt="Tel :"> <a href="tel:+33${phone2}">+33${phone2}</a></p> ` : ''}
                             </div></td>
         </tr>
         <tr>
