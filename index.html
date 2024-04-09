@@ -7,7 +7,7 @@
   </head>
   <body>
       <div id="form">
-	  <div id="logo-afb"><img src="./images/afb.png" alt="Logo AfB"></div>		
+	  <div id="logo-afb"><img src="images/afb.png" alt="Logo AfB"></div>		
 	  <h1>Générer ma signature AfB</h1>
           
 	  <div style="display:flex;justify-content:space-between;"><input type="text" id="firstName" placeholder="Prénom" style="width:49%;"> 
@@ -16,31 +16,36 @@
           <label for="showPhone">Afficher le téléphone :</label>
           <input type="checkbox" id="showPhone">
           <input type="text" id="phone" placeholder="TEL, chiffres après : +33">
-        <label for="showImage">Afficher une image supplémentaire :</label> <input type="checkbox" id="showImage">
+          
+          <label for="showPhone2">Afficher un deuxième téléphone :</label>
+          <input type="checkbox" id="showPhone2">
+          <input type="text" id="phone2" placeholder="TEL, chiffres après : +33">
+          <br><label for="showImage">Afficher une image supplémentaire :</label> <input type="checkbox" id="showImage">
 	<input type="file" id="additionalImage" accept="image/*">
 	<br>
 	
 	<select id="siteAddress" >
               <option value="" style="color:#999;">Choisir mon site</option>
               <option value="Siège social | 4 rue du Tanay - Cran-Gevrier - 74960 Annecy - 04 50 24 42 09">Siège social | 4 rue du Tanay - Cran-Gevrier - 74960 Annecy - 04 50 24 42 09</option>
-              <option value="AfB Annecy | 4 rue du Tanay - Cran-Gevrier - 74960 Annecy - 04 50 24 42 09">AfB Annecy | 4 rue du Tanay - Cran-Gevrier - 74960 Annecy - 04 50 24 42 09</option>
-              <option value="AfB Grenoble | 25 Rue Louis Gagnière - 38950 Saint-Martin-le-Vinoux - 04 76 04 42 42">AfB Grenoble | 25 Rue Louis Gagnière - 38950 Saint-Martin-le-Vinoux - 04 76 04 42 42</option>
-              <option value="AfB Nantes | 3 Rue de la Grande Bretagne - 44300 Nantes - 02 49 49 26 27">AfB Nantes | 3 Rue de la Grande Bretagne - 44300 Nantes - 02 49 49 26 27</option>
-              <option value="AfB Lyon | 21 Rue de la Part-Dieu - 69003 Lyon">AfB Lyon | 21 Rue de la Part-Dieu - 69003 Lyon</option>
-              <option value="AfB Fegersheim | 20 Rue du Commerce - 67640 Fegersheim - 03 67 29 05 45">AfB Fegersheim | 20 Rue du Commerce - 67640 Fegersheim - 03 67 29 05 45</option>
-              <option value="AfB Nantes Solilab | 8 Rue Saint Domingue - 44200 Nantes - 02 85 52 81 72">AfB Nantes Solilab | 8 Rue Saint Domingue - 44200 Nantes - 02 85 52 81 72</option>
-              <option value="AfB Caen | 123 Cours Caffarelli - 14000 Caen - 02 49 49 27 26">AfB Normandie | 123 Cours Caffarelli - 14000 Caen - 02 49 49 27 26</option>
+              <option value="AfB Shop Annecy | 4 rue du Tanay - Cran-Gevrier - 74960 Annecy - 04 50 24 42 09">AfB Shop Annecy | 4 rue du Tanay - Cran-Gevrier - 74960 Annecy - 04 50 24 42 09</option>
+              <option value="AfB Shop Caen | Centre Commercial Mondeville 2 Route nationale 13, 14120 Mondeville - 02 49 49 27 26">AfB Shop Caen | Centre Commercial Mondeville 2 Route nationale 13, 14120 Mondeville - 02 49 49 27 26</option>
+              <option value="AfB Shop Grenoble | 25 Rue Louis Gagnière - 38950 Saint-Martin-le-Vinoux - 04 76 04 42 42">AfB Shop Grenoble | 25 Rue Louis Gagnière - 38950 Saint-Martin-le-Vinoux - 04 76 04 42 42</option>
+              <option value="AfB Shop Nantes | 3 Rue de la Grande Bretagne - 44300 Nantes - 02 49 49 26 27">AfB Shop Nantes | 3 Rue de la Grande Bretagne - 44300 Nantes - 02 49 49 26 27</option>
+              <option value="AfB Shop Lyon | 21 Rue de la Part-Dieu - 69003 Lyon">AfB Shop Lyon | 21 Rue de la Part-Dieu - 69003 Lyon</option>
+              <option value="AfB Shop Strasbourg | 20 Rue du Commerce - 67640 Fegersheim - 03 67 29 05 45">AfB Shop Strasbourg | 20 Rue du Commerce - 67640 Fegersheim - 03 67 29 05 45</option>
+              <option value="AfB Shop Solilab | 8 Rue Saint Domingue - 44200 Nantes - 02 85 52 81 72">AfB Shop Solilab | 8 Rue Saint Domingue - 44200 Nantes - 02 85 52 81 72</option>
+              <option value="AfB Normandie | 123 Cours Caffarelli - 14000 Caen - 02 49 49 27 26">AfB Normandie | 123 Cours Caffarelli - 14000 Caen - 02 49 49 27 26</option>
           </select>
 	<br>
-	
 	<label for="showHours">Afficher les horaires de la boutique</label> : <input type="checkbox" id="showHours">
 	<select id="hours">
-              <option value="Du LUNDI AU VENDREDI : 09h30-12h30 / 13h30- 19h00 SAMEDI : 09h30-12h30 – 14h00 / 18:00">Shop Annecy</option>
+              <option value="Du LUNDI AU VENDREDI : 09h30-12h30 / 13h30- 19h00 SAMEDI : 09h30-12h30 – 13h30 / 18:00">Shop Annecy</option>
+              <option value="Du LUNDI AU VENDREDI : 09h30 - 19h00">Shop Caen</option>
               <option value="Du LUNDI AU VENDREDI : 09h30-12h30 / 13h30- 19h00 SAMEDI : 09h30-12h30 – 13h30 / 18:00">Shop Grenoble</option>
               <option value="Du LUNDI AU VENDREDI : 09h30-12h30 / 14h00- 19h00 SAMEDI : 09h30-12h30 – 14h00 / 18:00">Shop Nantes</option>
               <option value="Du LUNDI AU VENDREDI : 10h00-12h30 / 13h30- 19h00 SAMEDI : 09h30-12h30 – 13h30 / 18:00">Shop Lyon</option>
               <option value="Du LUNDI AU VENDREDI : 09h30-12h30 / 13h30- 19h00 SAMEDI : 09h30-12h30 – 13h30 / 18:00">Shop Strasbourg</option>
-              <option value="Du MARDI AU SAMEDI : 10h30-13h00 / 14h00- 18h30">Shop Solilab</option>
+              <option value="Du MARDI AU SAMEDI : 10h30-13h30 / 14h30- 18h30">Shop Solilab</option>
               <option value="Du LUNDI AU VENDREDI : 09h30 - 19h00">Shop Normandie</option>
         </select>
 
@@ -53,11 +58,10 @@
       <div id="bouton-generer"><button onclick="copySignatureToClipboard()">Copier la Signature</button></div>
       <div id="tuto"><h2>Comment intégrer ma nouvelle signature ?</h2>
 	   <ol><li>Copier la signature</li>
-		<li>Cliquez sur "ok" à l'apparition du pop-up</li>
-	       <li>Se rendre sur sa boite mail Oulook et ouvrir un mail<br><img src="./images/mail.PNG" alt="interface mail" width="100%"></li>
+	       <li>Se rendre sur sa boite mail Oulook et ouvrir un mail<br><img src="images/mail.png" alt="interface mail" width="100%"></li>
 	       <li>Cliquez dans le bandeau sur : "Une signature > Signature..."</li>
-	       <li>L'interface est la suivante :<br><img src="./images/signature.PNG" width="100%"></li>
-	       <li>Cliquez sur "Nouveau", attribuer un nom à votre signature, puis <b>coller</b></li>
+	       <li>L'interface est la suivante :<br><img src="images/signature.png" width="100%"></li>
+	       <li>Cliquer sur "Nouveau", attribuer un nom à votre signature, puis <b>coller</b></li>
 	       <li>Enfin sélectionner votre signature par défaut, sur les nouveaux messages et réponses</li>
 	   </ol></div>
 	
