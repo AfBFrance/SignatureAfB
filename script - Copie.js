@@ -19,13 +19,34 @@ function toggleElementDisplay(toggleId, elementId) {
         element.style.display = this.checked ? 'block' : 'none';
     });
 }
+function formatPhoneFR(raw) {
+  if (!raw) return "";
+  let s = raw.trim().replace(/\s+/g, "");     // supprime les espaces
+  s = s.replace(/[^\d+]/g, "");               // garde chiffres et +
+  // Si déjà au format international
+  if (s.startsWith("+33")) return s;
+
+  // Si commence par 0 (ex. 06...), on passe en +33
+  if (/^0\d{9}$/.test(s)) {
+    return "+33" + s.slice(1);
+  }
+
+  // Si 9-10 chiffres sans + (on tente quand même)
+  if (/^\d{9,10}$/.test(s)) {
+    if (s.length === 10 && s.startsWith("0")) return "+33" + s.slice(1);
+    return "+33" + s; // fallback
+  }
+
+  return s;
+}
 
 function generateSignature() {
     var firstName = document.getElementById('firstName').value;
     var lastName = document.getElementById('lastName').value;
     var position = document.getElementById('position').value;
-    var showPhone = document.getElementById('showPhone').checked;
-    var phone = showPhone ? document.getElementById('phone').value : '';
+	const showPhone = document.getElementById('showPhone').checked;
+  	const phoneRaw = showPhone ? document.getElementById('phone').value.trim() : "";
+  	const phoneFmt = formatPhoneFR(phoneRaw);   // => "" si vide, sinon +33...
     var siteSelect = document.getElementById('siteAddress');
     var siteAddress = siteSelect.options[siteSelect.selectedIndex].text;
     var email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}@afb-group.eu`;
