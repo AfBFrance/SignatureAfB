@@ -10,18 +10,28 @@
 	  <div id="logo-afb"><img src="images/afb.png" alt="Logo AfB"></div>		
 	  <h1>Générer ma signature AfB</h1>
           
-	  <div style="display:flex;justify-content:space-between;"><input type="text" id="firstName" placeholder="Prénom" style="width:49%;"> 
-          <input type="text" id="lastName" placeholder="Nom" style="width:50%;"></div>
-          <input type="text" id="position" placeholder="Poste">
-          <label for="showPhone">Afficher le téléphone :</label>
-          <input type="checkbox" id="showPhone">
-          <input type="text" id="phone" placeholder="TEL, chiffres après : +33">
-          
-          <label for="showPhone2">Afficher un deuxième téléphone :</label>
-          <input type="checkbox" id="showPhone2">
-          <input type="text" id="phone2" placeholder="TEL, chiffres après : +33">
-          <br><label for="showImage">Afficher une image supplémentaire :</label> <input type="checkbox" id="showImage">
-	<input type="file" id="additionalImage" accept="image/*">
+	  <div style="display:flex;justify-content:space-between;gap:8px;">
+		  <input type="text" id="firstName" placeholder="Prénom" style="width:49%;">
+		  <input type="text" id="lastName" placeholder="Nom" style="width:50%;">
+		</div>
+		
+		<input type="text" id="position" placeholder="Poste">
+		
+		<label for="showPhone">Afficher le téléphone :</label>
+		<input type="checkbox" id="showPhone">
+		<input type="text" id="phone" placeholder="Téléphone (ex. 0612345678)" style="display:none;">
+		
+		<label for="showPhone2">Afficher un deuxième téléphone :</label>
+		<input type="checkbox" id="showPhone2">
+		<input type="text" id="phone2" placeholder="Téléphone (ex. 0145678901)" style="display:none;">
+		
+		<br>
+		
+		<label for="showImage">Afficher une image supplémentaire :</label>
+		<input type="checkbox" id="showImage">
+		<input type="file" id="additionalImage" accept="image/*" style="display:none;">
+
+	<br>
 	<br>
 	
 	<select id="siteAddress" >
