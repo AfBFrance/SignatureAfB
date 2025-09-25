@@ -57,6 +57,20 @@ function generateSignature() {
   var showHours = document.getElementById('showHours').checked;
   var hours     = showHours ? document.getElementById('hours').value : '';
 
+  // ====== NOUVEAU : construction “anti-coupure” des téléphones ======
+  // - 0 tel : rien
+  // - 1 tel : inline après l’email (avec " | ")
+  // - 2 tel : le second passe à la ligne (avec <br>)
+  var phonesHtml = '';
+  if (phoneFmt) {
+    phonesHtml += ` | <img src="images/tel.png" alt="Téléphone"> <a href="tel:${phoneFmt.replace(/\s/g,'')}" style="text-decoration:none;color:#000;white-space:nowrap;">${phoneFmt}</a>`;
+  }
+  if (phone2Fmt) {
+    // si un premier tel existe, on force un retour ligne pour le second
+    phonesHtml += `${phoneFmt ? '<br>' : ' | '}<img src="images/tel.png" alt="Téléphone"> <a href="tel:${phone2Fmt.replace(/\s/g,'')}" style="text-decoration:none;color:#000;white-space:nowrap;">${phone2Fmt}</a>`;
+  }
+  // ================================================================
+
   var signature = `
   <div class="signature-template">
     <table style="padding:5px 15px 0;max-width:550px;">
@@ -70,9 +84,9 @@ function generateSignature() {
           </p>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;">
             <p style="margin:0;">
-              <img src="images/email.png" alt="Email"> <a href="mailto:${email}">${email}</a>
-              ${phoneFmt ? ` | <img src="images/tel.png" alt="Téléphone"> <a href="tel:${phoneFmt.replace(/\s/g,'')}">${phoneFmt}</a>` : ``}
-              ${phone2Fmt ? ` | <img src="images/tel.png" alt="Téléphone"> <a href="tel:${phone2Fmt.replace(/\s/g,'')}">${phone2Fmt}</a>` : ``}
+              <img src="images/email.png" alt="Email">
+              <a href="mailto:${email}" style="text-decoration:none;color:#000;white-space:nowrap;">${email}</a>
+              ${phonesHtml}
             </p>
           </div>
         </td>
