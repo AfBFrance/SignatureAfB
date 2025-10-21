@@ -108,7 +108,6 @@ function generateSignature() {
       </tr>
       <tr>
         <td colspan="2">
-          <img src="images/barre.jpg" alt="" style="max-width:100%;height:auto;">
           <p id="siteAddress" style="margin:6px 0 0 0;">${siteAddress}</p>
           ${showHours ? `<p style="margin:2px 0 0 0;">${hours}</p>` : ``}
         </td>
