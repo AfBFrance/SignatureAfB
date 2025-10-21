@@ -76,7 +76,7 @@ function generateSignature() {
     <table style="padding:5px 15px 0;max-width:550px;">
       <tr style="width:20%;">
         <td style="text-align:center;">
-          <img src="images/afb.png" alt="Logo AfB" style="width:100px;">
+          <img src="images/afblogo.jpg" alt="Logo AfB" style="width:100px;">
         </td>
         <td>
           <p style="margin:0 0 5px 0;">
