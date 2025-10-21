@@ -1,118 +1,125 @@
+/* Base */
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #E5F0C7;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #E5F0C7;
 }
 
-h1{
-text-align:center;
-color:#082C27;
+h1 {
+  text-align: center;
+  color: #082C27;
 }
 
-#logo-afb{
-text-align:center;
+/* Logo de l'interface (en haut de la page) */
+#logo-afb {
+  text-align: center;
+  margin: 8px 0 12px;
 }
+#logo-afb img {
+  max-width: 180px;   /* limite la taille du logo d’en-tête */
+  height: auto;
+  display: inline-block;
+}
+
+/* Cartes */
 #form {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 20px auto;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-#preview,#bouton-generer,#tuto{
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 20px auto;
+#preview,
+#bouton-generer,
+#tuto {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-#tuto li{
- line-height: 2em;
+/* Tuto */
+#tuto li { line-height: 2em; }
+#tuto img { border: solid 1px; max-width: 100%; height: auto; }
 
+/* Form */
+input[type=text], select, button, input[type=file] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-#tuto img{
- border:solid 1px;
-}
-
-input[type=text], select, button,input[type=file] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
+/* Boutons */
 button {
-    background-color: #082C27;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight:bold;
-    font-size:1em;
+  background-color: #082C27;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
 }
+button:hover { background-color: #45a049; }
 
-button:hover {
-    background-color: #45a049;
-}
-
+/* Aperçu d’un éventuel autre logo */
 #logoPreview {
-    display: block;
-    margin: 10px auto;
-    max-width: 100px;
+  display: block;
+  margin: 10px auto;
+  max-width: 100px;
 }
 
-/* Style du champ de sélection de fichier */
+/* Champ fichier */
 #additionalImage {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-    display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  display: block;
 }
 
-/* Styles additionnels pour la zone de prévisualisation de la signature */
+/* Signature – gabarit */
 .signature-preview {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 20px;
 }
 
-/* Assurez-vous que ces styles s'intègrent bien avec le reste de votre mise en page */
 .signature-template {
-  font-size:12px;
-    font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
 }
 
-.signature-template a{
-  color :#005191;
-  text-decoration:none;
-  
+.signature-template a {
+  color: #005191;
+  text-decoration: none;
 }
 
+/* Très important : limiter le logo dans la signature */
 .signature-template img {
-    vertical-align: middle;
-    margin-right: 10px;
+  vertical-align: middle;
+  margin-right: 10px;
+  max-width: 120px;    /* limite le logo DANS la signature */
+  height: auto;
 }
 
+/* Table signature (compat clients mail) */
 .signature-template table {
-    border-collapse: separate;
-    border-spacing: 10px 5px; /* Ajouter de l'espace entre les cellules}
+  border-collapse: separate;
+  border-spacing: 10px 5px; /* Ajouter de l'espace entre les cellules */
+}
 
 .signature-template td {
-    border: 1px solid #ddd
-    padding: 8px;}
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
+/* Responsive */
 @media screen and (max-width: 600px) {
-    .signature-template table {
-        width: 100%;
-    }
-
-    .signature-template img {
-        max-width: 80px;
-    }
+  .signature-template table { width: 100%; }
+  .signature-template img { max-width: 80px; }
 }
